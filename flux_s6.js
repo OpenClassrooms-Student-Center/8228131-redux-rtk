@@ -24,7 +24,6 @@ let state = {
     value: null,
     list: []
 };
-const subscribers = [];
 
 const reducer = (currentState, action ) => {
     switch (action.type) {

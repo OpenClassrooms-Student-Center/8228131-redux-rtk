@@ -27,7 +27,7 @@ subscribe((state) => {
         document.getElementById('header').textContent = `Le propriétaire du restaurant est ${state.owner.firstName}`
     }
     if (state.list) {
-        document.getElementById('command').innerHTML = ``;
+        document.getElementById('command').innerHTML = `<h2>Vous avez sélectionné les produits suivants:</h2>`;
         for (let item of state.list) {
             const itemElement = document.createElement('div')
             itemElement.innerHTML = `
@@ -92,7 +92,6 @@ const SuperCremeux = {
     price: 14.99,
 }
 
-
 const PouletCroquant = {
     title: 'Poulet Croquant',
     price: 17.99,
@@ -104,5 +103,16 @@ const PRODUCT_LIST = {
     DoubleCantal,
 }
 
+function autoAddPromo() {
+    const stateRef = state
+    setTimeout(function() {
+        stateRef.list.forEach((product) => {
+            if (product.title === 'Super Crémeux') {
+                product.price = 2
+            }
+        })
+        dispatch(stateRef)
+    }, 9000)
+}
 
-setTimeout(autoAddPromo, 3000);
+autoAddPromo()
