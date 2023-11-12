@@ -52,13 +52,13 @@ dispatch({
 // Nous ajoutons un EventListener au submit du formulaire
 document.getElementById('addForm').addEventListener("submit", (evt) => {
     evt.preventDefault()
-    const firtNameInput = evt.currentTarget.firstName
+    const firstNameInput = evt.currentTarget.firstName
     dispatch({
         company: {
             name: 'Burger du Pré'
         },
         owner: {
-            firstName: firtNameInput.value,
+            firstName: firstNameInput.value,
         },
         list: []
     })

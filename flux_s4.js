@@ -40,8 +40,8 @@ dispatch({...state, company: {name: 'Burger du Pré'}})
 
 document.getElementById('addForm').addEventListener("submit", (evt) => {
     evt.preventDefault()
-    const firtNameInput = evt.currentTarget.firstName
-    const newState = {...state, owner: {firstName: firtNameInput.value,}}
+    const firstNameInput = evt.currentTarget.firstName
+    const newState = {...state, owner: {firstName: firstNameInput.value,}}
     dispatch(newState)
 })
 
