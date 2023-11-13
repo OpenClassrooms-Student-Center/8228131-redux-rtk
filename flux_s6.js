@@ -58,8 +58,6 @@ const store = window.RTK.configureStore(
     }
 )
 
-console.log(store.getState(), store)
-
 store.subscribe(() => {
     const state = store.getState()
     if (state.owner) {

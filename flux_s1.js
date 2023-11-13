@@ -1,8 +1,5 @@
 
-let state = {
-    value: null,
-    list: []
-};
+let state = {};
 // Nous stockons ici les fonctions qui seront appelées à chaque changement des valeurs du state
 const subscribers = [];
 
@@ -32,7 +29,6 @@ dispatch({
     company: {
         name: 'Burger du Pré'
     },
-    list: []
 })
 
 // Nous ajoutons un EventListener au submit du formulaire
